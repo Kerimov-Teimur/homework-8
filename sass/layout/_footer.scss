@@ -4,15 +4,25 @@
 }
 
 .footer__container {
-    // display: flex;
     align-items: baseline;
     justify-content: space-between;
 
+    @include mobile {
     text-align: center;
+    }
+
+
+    @include table {
+        display: flex;
+    }
+
 }
 
 .footer__address {
-    margin-bottom: 60px;
+    @include mobile {
+        margin-bottom: 60px;
+    }
+    
 }
 
 .address {
@@ -45,7 +55,9 @@
 /*                                 =========JOIN */
 
 .join {
-    margin-bottom: 60px;
+    @include mobile {
+        margin-bottom: 60px;
+    }
 }
 
 .join__title {
@@ -61,13 +73,18 @@
 .join__list {
     display: flex;
     justify-content: center;
-    // width: 206px;
     gap: 10px;
+
+    @include desktop {
+        width: 206px;
+    }
 }
 
-// .join__item {
-//     width: calc((100% - 30px) / 4);
-// }
+.join__item {
+    @include desktop {
+        width: calc((100% - 30px) / 4);
+    }
+}
 
 .join__link {
     display: flex;
@@ -100,6 +117,10 @@
 .subscription__field {
     // display: flex;
     align-items: center;
+
+    @include desktop {
+        display: flex;
+    }
 }
 
 .subscription__input {
@@ -134,7 +155,6 @@
     // margin-left: 12px;
     // display: flex;
     align-items: center;
-    text-align: center;
     
     font-weight: 700;
     font-size: 16px;
@@ -156,6 +176,15 @@
     &:hover,
     &:focus {
         color: var(--title-text-color);
+    }
+
+    @include mobile {
+        text-align: center;
+    }
+
+    @include desktop {
+        display: flex;
+        margin-left: 12px;
     }
 }
 
