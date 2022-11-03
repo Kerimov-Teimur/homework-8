@@ -7,13 +7,10 @@
     align-items: baseline;
     justify-content: space-between;
 
-    @include mobile {
-    text-align: center;
-    }
-
-
-    @include table {
+    @include tablet {
         display: flex;
+        flex-wrap: wrap;
+        text-align: center;
     }
 
 }
