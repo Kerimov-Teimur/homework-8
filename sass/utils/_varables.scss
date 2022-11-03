@@ -1,0 +1,30 @@
+:root {
+    /* color */
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --accent: #2196f3;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --primary-bcg-color: #f5f5f5;
+    --secondary-bcg-color: #f5f4fa;
+    --footer-bcg-color: #2f303a;
+    --color-icon: #afb1b8;
+
+    /* SHADOW */
+    --shadow-footer: rgba(255, 255, 255, 0.1);
+
+    --shadow-hero-btn: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    --shadow-gallery: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+    --shadow-team: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    --color-white-shadow: rgba(255, 255, 255, 0.6);
+
+    --color-shadow-gallery: rgba(33, 150, 243, 0.9);
+
+    /* CUBIK */
+    --cubik: cubic-bezier(0.4, 0, 0.2, 1);
+}
