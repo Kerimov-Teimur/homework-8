@@ -4,15 +4,26 @@
 
 .team-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
 .team-item {
-    width: calc((100% - 3 * 30px) / 4);
-
     background-color: var(--white-color);
     box-shadow: var(--shadow-team);
     border-radius: 0px 0px 4px 4px;
+    
+    width: 100%;
+    
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 30px) / 2);
+    }
+    
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 3 * 30px) / 4);
+    }
+
+    
 }
 
 .team-content {
@@ -22,9 +33,13 @@
 .team-section-title {
     margin-bottom: 50px;
 
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.17;
     text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 36px;
+    }
 }
 
 .team-subtitle {

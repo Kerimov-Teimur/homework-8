@@ -8,9 +8,24 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding: 0 15px 0 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 html {
@@ -98,8 +113,17 @@ address {
   overflow: hidden;
 }
 
-.section {
-  padding: 94px 0;
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .title {
@@ -484,11 +508,22 @@ address {
 
 .about__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .about__item {
-  width: calc((100% - 90px) / 4);
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .about__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .about__title {
@@ -516,6 +551,21 @@ address {
 
 .work.section {
   padding-top: 0;
+}
+@media screen and (max-width: 1199px) {
+  .work.section {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }
 
 .work-list {
@@ -559,14 +609,25 @@ address {
 
 .team-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .team-item {
-  width: calc((100% - 90px) / 4);
   background-color: var(--white-color);
   box-shadow: var(--shadow-team);
   border-radius: 0px 0px 4px 4px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .team-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .team-content {
@@ -575,9 +636,14 @@ address {
 
 .team-section-title {
   margin-bottom: 50px;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .team-section-title {
+    font-size: 36px;
+  }
 }
 
 .team-subtitle {
@@ -623,19 +689,35 @@ address {
 
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .clients-item {
-  width: calc((100% - 150px) / 6);
+  width: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .clients-item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .clients-title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.16;
   text-align: center;
   margin-bottom: 50px;
+}
+@media screen and (min-width: 1200px) {
+  .clients-title {
+    font-size: 36px;
+  }
 }
 
 .clients-link {
@@ -645,7 +727,7 @@ address {
   fill: var(--color-icon);
   border: 1px solid var(--color-icon);
   border-radius: 4px;
-  width: 170px;
+  width: 100%;
   height: 92px;
   transition: border-color 250ms var(--cubik);
 }
