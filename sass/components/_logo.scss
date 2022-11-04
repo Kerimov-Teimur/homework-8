@@ -13,8 +13,16 @@
 
 .navigation__logo {
     min-width: 145px;
-    // padding: 24px 0 25px 0;
+    
     padding: 16px 0 16px;
+
+    @include tablet {
+        padding: 26px 0 26px 0;
+    }
+
+    @include desktop {
+        padding: 24px 0 25px 0;
+    }
 }
 
 .navigation__text {
