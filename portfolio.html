@@ -29,13 +29,24 @@
             ><span class="navigation__text">Web</span>Studio
           </a>
 
+          <button type="button" class="menu-button" data-menu-open>
+            <svg
+              class="navigation__icon"
+              width="40"
+              height="40"
+              aria-label="перемикач мобільного меню"
+            >
+              <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+
           <ul class="menu list">
             <li class="menu__item">
-              <a href="./index.html" class="menu__link link"> Студія </a>
+              <a href="./index.html" class="menu__link link">Студія</a>
             </li>
             <li class="menu__item">
-              <a href="./portfolio.html" class="menu__link link">
-                <span class="menu__text">Портфоліо</span></a
+              <a href="./portfolio.html" class="menu__link link"
+                ><span class="menu__text">Портфоліо</span>></a
               >
             </li>
             <li class="menu__item">
@@ -50,8 +61,11 @@
               class="connect__link connect__mail link"
               href="mailto:info@devstudio.com"
             >
-              <svg class="connect__icon" width="16" height="12">
-                <use href="./images/sprite.svg#icon-mail"></use>
+              <svg class="connect__icon" width="14" height="10">
+                <use
+                  class="connect__mail"
+                  href="./images/sprite.svg#icon-mail"
+                ></use>
               </svg>
               info@devstudio.com
             </a>
@@ -59,13 +73,90 @@
 
           <li class="connect__item">
             <a class="connect__link connect__tel link" href="tel:+380961111111">
-              <svg class="connect__icon" width="16" height="12">
-                <use href="./images/sprite.svg#icon-phone"></use>
+              <svg class="connect__icon" width="10" height="14">
+                <use
+                  class="connect__tel"
+                  href="./images/sprite.svg#icon-phone"
+                ></use>
               </svg>
               +38 096 111 11 11
             </a>
           </li>
         </ul>
+      </div>
+
+      <div class="mobile-menu is-hidden" data-menu>
+        <div class="container">
+          <div class="mob-menu__top">
+            <button type="button" class="menu-button" data-menu-close>
+              <svg
+                class="mobile-menu-icon"
+                width="40"
+                height="40"
+                aria-label="перемикач мобільного меню"
+              >
+                <use
+                  class="incon-cross"
+                  href="./images/sprite.svg#icon-cross"
+                ></use>
+              </svg>
+            </button>
+
+            <ul class="mobile-menu__menu list">
+              <li class="mobile-menu__item">
+                <a href="./index.html" class="mobile-menu__link link">Студія</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="./portfolio.html" class="mobile-menu__link link">
+                  <span class="mobile-menu__text">Портфоліо</span></a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a href="" class="mobile-menu__link link">Контакти</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mob-menu__bottom">
+            <ul class="mobile-connect list">
+              <li class="mobile-connect__item">
+                <a
+                  class="mobile-connect__link mobile-connect__mail link"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com
+                </a>
+              </li>
+
+              <li class="mobile-connect__item">
+                <a
+                  class="mobile-connect__link mobile-connect__tel link"
+                  href="tel:+380961111111"
+                >
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+
+            <ul class="mobile-soc list">
+              <li class="mobile-soc__item">
+                <a href="" class="mobile-soc__link link">Instagram</a>
+                <span class="mobile-soc__line"></span>
+              </li>
+              <li class="mobile-soc__item">
+                <a href="" class="mobile-soc__link link">Twitter</a>
+                <span class="mobile-soc__line"></span>
+              </li>
+              <li class="mobile-soc__item">
+                <a href="" class="mobile-soc__link link">Facebook</a>
+                <span class="mobile-soc__line"></span>
+              </li>
+              <li class="mobile-soc__item">
+                <a href="" class="mobile-soc__link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -75,7 +166,7 @@
         <div class="container">
           <h1 class="visually-hidden">Portfolio</h1>
 
-          <ul class="content-list list">
+          <!-- <ul class="content-list list">
             <li class="content-item">
               <button type="button" class="content-btn link">Усі</button>
             </li>
@@ -91,17 +182,44 @@
             <li class="content-item">
               <button type="button" class="content-btn link">Маркетинг</button>
             </li>
-          </ul>
+          </ul> -->
+
           <ul class="gallery-list list">
             <li class="gallery-item item">
               <a class="gallery-link link" href="">
                 <div class="gallery-thumb">
-                  <img
-                    src="./images/img-portfolio1.jpg"
-                    alt="gallery"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/gallery/des-gallery-1.jpg  1x,
+                        ./images/gallery/des-gallery-1x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/tab-gallery-1.jpg  1x,
+                        ./images/gallery/tab-gallery-1x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/mob-gallary-1.jpg  1x,
+                        ./images/gallery/mob-gallary-1x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/gallery/des-gallery-1.jpg  1x,
+                        ./images/gallery/des-gallery-1x.jpg 2x
+                      "
+                      src="./images/gallery/des-gallery-1.jpg"
+                      alt="igor"
+                      width="450"
+                    />
+                  </picture>
                   <p class="gallery-text-thumb">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -117,12 +235,38 @@
             <li class="gallery-item item">
               <a class="gallery-link link" href="">
                 <div class="gallery-thumb">
-                  <img
-                    src="./images/img-portfolio2.jpg"
-                    alt="gallery"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/gallery/des-gallery-2.jpg  1x,
+                        ./images/gallery/des-gallery-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/tab-gallery-2.jpg  1x,
+                        ./images/gallery/tab-gallery-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/mob-gallary-2.jpg  1x,
+                        ./images/gallery/mob-gallary-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/gallery/des-gallery-2.jpg  1x,
+                        ./images/gallery/des-gallery-2x.jpg 2x
+                      "
+                      src="./images/gallery/des-gallery-2.jpg"
+                      alt="igor"
+                      width="450"
+                    />
+                  </picture>
                   <p class="gallery-text-thumb">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -140,12 +284,38 @@
             <li class="gallery-item item">
               <a class="gallery-link link" href="">
                 <div class="gallery-thumb">
-                  <img
-                    src="./images/img-portfolio3.jpg"
-                    alt="gallery"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/gallery/des-gallery-3.jpg  1x,
+                        ./images/gallery/des-gallery-3x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/tab-gallery-3.jpg  1x,
+                        ./images/gallery/tab-gallery-3x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/mob-gallary-3.jpg  1x,
+                        ./images/gallery/mob-gallary-3x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/gallery/des-gallery-3.jpg  1x,
+                        ./images/gallery/des-gallery-3x.jpg 2x
+                      "
+                      src="./images/gallery/des-gallery-3.jpg"
+                      alt="igor"
+                      width="450"
+                    />
+                  </picture>
                   <p class="gallery-text-thumb">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -161,12 +331,38 @@
             <li class="gallery-item item">
               <a class="gallery-link link" href="">
                 <div class="gallery-thumb">
-                  <img
-                    src="./images/img-portfolio4.jpg"
-                    alt="gallery"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/gallery/des-gallery-4.jpg  1x,
+                        ./images/gallery/des-gallery-4x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/tab-gallery-4.jpg  1x,
+                        ./images/gallery/tab-gallery-4x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/mob-gallary-4.jpg  1x,
+                        ./images/gallery/mob-gallary-4x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/gallery/des-gallery-4.jpg  1x,
+                        ./images/gallery/des-gallery-4x.jpg 2x
+                      "
+                      src="./images/gallery/des-gallery-4.jpg"
+                      alt="igor"
+                      width="450"
+                    />
+                  </picture>
                   <p class="gallery-text-thumb">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -182,12 +378,38 @@
             <li class="gallery-item item">
               <a class="gallery-link link" href="">
                 <div class="gallery-thumb">
-                  <img
-                    src="./images/img-portfolio5.jpg"
-                    alt="gallery"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/gallery/des-gallery-5.jpg  1x,
+                        ./images/gallery/des-gallery-5x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/tab-gallery-5.jpg  1x,
+                        ./images/gallery/tab-gallery-5x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/mob-gallary-5.jpg  1x,
+                        ./images/gallery/mob-gallary-5x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/gallery/des-gallery-5.jpg  1x,
+                        ./images/gallery/des-gallery-5x.jpg 2x
+                      "
+                      src="./images/gallery/des-gallery-5.jpg"
+                      alt="igor"
+                      width="450"
+                    />
+                  </picture>
                   <p class="gallery-text-thumb">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -203,12 +425,38 @@
             <li class="gallery-item item">
               <a class="gallery-link link" href="">
                 <div class="gallery-thumb">
-                  <img
-                    src="./images/img-portfolio6.jpg"
-                    alt="gallery"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/gallery/des-gallery-6.jpg  1x,
+                        ./images/gallery/des-gallery-6x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/tab-gallery-6.jpg  1x,
+                        ./images/gallery/tab-gallery-6x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/mob-gallary-6.jpg  1x,
+                        ./images/gallery/mob-gallary-6x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/gallery/des-gallery-6.jpg  1x,
+                        ./images/gallery/des-gallery-6x.jpg 2x
+                      "
+                      src="./images/gallery/des-gallery-6.jpg"
+                      alt="igor"
+                      width="450"
+                    />
+                  </picture>
                   <p class="gallery-text-thumb">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -226,12 +474,38 @@
             <li class="gallery-item item">
               <a class="gallery-link link" href="">
                 <div class="gallery-thumb">
-                  <img
-                    src="./images/img-portfolio7.jpg"
-                    alt="gallery"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/gallery/des-gallery-7.jpg  1x,
+                        ./images/gallery/des-gallery-7x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/tab-gallery-7.jpg  1x,
+                        ./images/gallery/tab-gallery-7x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/mob-gallary-7.jpg  1x,
+                        ./images/gallery/mob-gallary-7x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/gallery/des-gallery-7.jpg  1x,
+                        ./images/gallery/des-gallery-7x.jpg 2x
+                      "
+                      src="./images/gallery/des-gallery-7.jpg"
+                      alt="igor"
+                      width="450"
+                    />
+                  </picture>
                   <p class="gallery-text-thumb">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -247,12 +521,38 @@
             <li class="gallery-item item">
               <a class="gallery-link link" href="">
                 <div class="gallery-thumb">
-                  <img
-                    src="./images/img-portfolio8.jpg"
-                    alt="gallery"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/gallery/des-gallery-8.jpg  1x,
+                        ./images/gallery/des-gallery-8x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/tab-gallery-8.jpg  1x,
+                        ./images/gallery/tab-gallery-8x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/mob-gallary-8.jpg  1x,
+                        ./images/gallery/mob-gallary-8x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/gallery/des-gallery-8.jpg  1x,
+                        ./images/gallery/des-gallery-8x.jpg 2x
+                      "
+                      src="./images/gallery/des-gallery-8.jpg"
+                      alt="igor"
+                      width="450"
+                    />
+                  </picture>
                   <p class="gallery-text-thumb">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -268,12 +568,38 @@
             <li class="gallery-item item">
               <a class="gallery-link link" href="">
                 <div class="gallery-thumb">
-                  <img
-                    src="./images/img-portfolio9.jpg"
-                    alt="gallery"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/gallery/des-gallery-9.jpg  1x,
+                        ./images/gallery/des-gallery-9x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/tab-gallery-9.jpg  1x,
+                        ./images/gallery/tab-gallery-9x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/mob-gallary-9.jpg  1x,
+                        ./images/gallery/mob-gallary-9x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      srcset="
+                        ./images/gallery/des-gallery-9.jpg  1x,
+                        ./images/gallery/des-gallery-9x.jpg 2x
+                      "
+                      src="./images/gallery/des-gallery-9.jpg"
+                      alt="igor"
+                      width="450"
+                    />
+                  </picture>
                   <p class="gallery-text-thumb">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -375,5 +701,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>
