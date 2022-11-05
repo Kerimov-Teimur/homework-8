@@ -685,11 +685,12 @@ address {
 .mobile-soc {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 @media screen and (min-width: 480px) {
   .mobile-soc {
     display: flex;
+    justify-content: flex-start;
   }
 }
 
@@ -699,6 +700,12 @@ address {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent);
+}
+@media screen and (max-width: 479px) {
+  .mobile-soc__link {
+    font-size: 12px;
+    line-height: 1.22;
+  }
 }
 
 .mobile-soc__line {
@@ -1052,6 +1059,14 @@ address {
   justify-content: center;
   margin-bottom: 50px;
   gap: 8px;
+}
+@media screen and (max-width: 767px) {
+  .content-list {
+    width: 326px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+  }
 }
 
 .content-btn {
