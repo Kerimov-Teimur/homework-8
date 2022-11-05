@@ -1057,7 +1057,6 @@ address {
 .content-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
   gap: 8px;
 }
 @media screen and (max-width: 767px) {
@@ -1066,6 +1065,17 @@ address {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 8px;
+    padding-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content-list {
+    padding-bottom: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .content-list {
+    padding-bottom: 34px;
   }
 }
 

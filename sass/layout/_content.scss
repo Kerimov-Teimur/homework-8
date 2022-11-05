@@ -1,7 +1,6 @@
 .content-list {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
     gap: 8px;
     
     @media screen and (max-width: 767px) {
@@ -9,13 +8,17 @@
             flex-wrap: wrap;
             justify-content: flex-start;
             gap: 8px;
+            padding-bottom: 40px;
         }
-}
 
-// .content-item {
-//     display: flex;
-//     flex-wrap: wrap;
-// }
+    @include tablet {
+        padding-bottom: 14px;
+    }
+
+    @include desktop {
+        padding-bottom: 34px;
+    }
+}
 
 .content-btn {
     display: inline-block;
