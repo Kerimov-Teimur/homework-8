@@ -179,11 +179,20 @@ width: 100%;
     line-height: 1.71;
     color: var(--primary-text-color);
 
+    
     @media screen and (max-width: 479px) {
         display: flex;
         font-weight: 400;
         font-size: 10px;
         line-height: 1.16;
+        letter-spacing: 0.03em;
+        color: #757575;
+    }
+
+    @media screen and (min-width: 420px) {
+        display: flex;
+        font-size: 10px;
+        line-height: 1.71;
         letter-spacing: 0.03em;
         color: #757575;
     }

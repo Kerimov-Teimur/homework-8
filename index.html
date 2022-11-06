@@ -89,7 +89,11 @@
       <div class="mobile-menu is-hidden" data-menu>
         <div class="container">
           <div class="mob-menu__top">
-            <button type="button" class="menu-button" data-menu-close>
+            <button
+              type="button"
+              class="menu-button menu-button-cross"
+              data-menu-close
+            >
               <svg
                 class="mobile-menu-icon"
                 width="40"
@@ -97,7 +101,7 @@
                 aria-label="перемикач мобільного меню"
               >
                 <use
-                  class="incon-cross"
+                  class="icon-cross"
                   href="./images/sprite.svg#icon-cross"
                 ></use>
               </svg>
@@ -246,34 +250,56 @@
           <ul class="work-list list">
             <li class="work-item item">
               <div class="work-thumb">
-                <img
-                  src="./images/img.jpg"
-                  alt="work"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img.jpg 1x, ./images/work-1-x2.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    src="./images/img.jpg"
+                    alt="work"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
+
                 <h3 class="work-subtitle">Десктопні додатки</h3>
               </div>
             </li>
             <li class="work-item item">
               <div class="work-thumb">
-                <img
-                  src="./images/img2.jpg"
-                  alt="phone"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img2.jpg 1x, ./images/work-2-x2.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    src="./images/img2.jpg"
+                    alt="work"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <h3 class="work-subtitle">Мобільні додатки</h3>
               </div>
             </li>
             <li class="work-item item">
               <div class="work-thumb">
-                <img
-                  src="./images/img3.jpg"
-                  alt="table"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img3.jpg 1x, ./images/work-3-x2.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    src="./images/img3.jpg"
+                    alt="work"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <h3 class="work-subtitle">Дизайнерські рішення</h3>
               </div>
             </li>
@@ -290,29 +316,29 @@
               <picture>
                 <source
                   srcset="
-                    ./images/team/igor-desktop-img.jpg       1x,
-                    ./../images/team/igor-desktop-img@2x.jpg 2x
+                    ./images/team/igor-desktop-img.jpg    1x,
+                    ./images/team/igor-desktop-img@2x.jpg 2x
                   "
                   media="(min-width: 1200px)"
                 />
                 <source
                   srcset="
-                    ./images/team/igor-tablet-img.jpg       1x,
-                    ./../images/team/igor-tablet-img@2x.jpg 2x
+                    ./images/team/igor-tablet-img.jpg    1x,
+                    ./images/team/igor-tablet-img@2x.jpg 2x
                   "
                   media="(min-width: 768px)"
                 />
                 <source
                   srcset="
-                    ./images/team/igor-mobile-img.jpg       1x,
-                    ./../images/team/igor-mobile-img@2x.jpg 2x
+                    ./images/team/igor-mobile-img.jpg    1x,
+                    ./images/team/igor-mobile-img@2x.jpg 2x
                   "
                   media="(max-width: 767px)"
                 />
                 <img
                   srcset="
-                    ./images/team/igor-desktop-img.jpg       1x,
-                    ./../images/team/igor-desktop-img@2x.jpg 2x
+                    ./images/team/igor-desktop-img.jpg    1x,
+                    ./images/team/igor-desktop-img@2x.jpg 2x
                   "
                   src="./images/team/igor-desktop-img.jpg"
                   alt="igor"
@@ -360,29 +386,29 @@
               <picture>
                 <source
                   srcset="
-                    ./images/team/olga-desktop-img.jpg       1x,
-                    ./../images/team/olga-desktop-img@2x.jpg 2x
+                    ./images/team/olga-desktop-img.jpg    1x,
+                    ./images/team/olga-desktop-img@2x.jpg 2x
                   "
                   media="(min-width: 1200px)"
                 />
                 <source
                   srcset="
-                    ./images/team/olga-tablet-img.jpg       1x,
-                    ./../images/team/olga-tablet-img@2x.jpg 2x
+                    ./images/team/olga-tablet-img.jpg    1x,
+                    ./images/team/olga-tablet-img@2x.jpg 2x
                   "
                   media="(min-width: 768px)"
                 />
                 <source
                   srcset="
-                    ./images/team/olga-mobile-img.jpg       1x,
-                    ./../images/team/olga-mobile-img@2x.jpg 2x
+                    ./images/team/olga-mobile-img.jpg    1x,
+                    ./images/team/olga-mobile-img@2x.jpg 2x
                   "
                   media="(max-width: 767px)"
                 />
                 <img
                   srcset="
-                    ./images/team/olga-desktop-img.jpg       1x,
-                    ./../images/team/olga-desktop-img@2x.jpg 2x
+                    ./images/team/olga-desktop-img.jpg    1x,
+                    ./images/team/olga-desktop-img@2x.jpg 2x
                   "
                   src="./images/team/olga-desktop-img.jpg"
                   alt="olga"
@@ -429,29 +455,29 @@
               <picture>
                 <source
                   srcset="
-                    ./images/team/mykola-desktop-img.jpg       1x,
-                    ./../images/team/mykola-desktop-img@2x.jpg 2x
+                    ./images/team/mykola-desktop-img.jpg    1x,
+                    ./images/team/mykola-desktop-img@2x.jpg 2x
                   "
                   media="(min-width: 1200px)"
                 />
                 <source
                   srcset="
-                    ./images/team/mykola-tablet-img.jpg       1x,
-                    ./../images/team/mykola-tablet-img@2x.jpg 2x
+                    ./images/team/mykola-tablet-img.jpg    1x,
+                    ./images/team/mykola-tablet-img@2x.jpg 2x
                   "
                   media="(min-width: 768px)"
                 />
                 <source
                   srcset="
-                    ./images/team/mykola-mobile-img.jpg       1x,
-                    ./../images/team/mykola-mobile-img@2x.jpg 2x
+                    ./images/team/mykola-mobile-img.jpg    1x,
+                    ./images/team/mykola-mobile-img@2x.jpg 2x
                   "
                   media="(max-width: 767px)"
                 />
                 <img
                   srcset="
-                    ./images/team/mykola-desktop-img.jpg       1x,
-                    ./../images/team/mykola-desktop-img@2x.jpg 2x
+                    ./images/team/mykola-desktop-img.jpg    1x,
+                    ./images/team/mykola-desktop-img@2x.jpg 2x
                   "
                   src="./images/team/mykola-desktop-img.jpg"
                   alt="mykola"
@@ -498,29 +524,29 @@
               <picture>
                 <source
                   srcset="
-                    ./images/team/mikhail-desktop-img.jpg       1x,
-                    ./../images/team/mikhail-desktop-img@2x.jpg 2x
+                    ./images/team/mikhail-desktop-img.jpg    1x,
+                    ./images/team/mikhail-desktop-img@2x.jpg 2x
                   "
                   media="(min-width: 1200px)"
                 />
                 <source
                   srcset="
-                    ./images/team/mikhail-tablet-img.jpg       1x,
-                    ./../images/team/mikhail-tablet-img@2x.jpg 2x
+                    ./images/team/mikhail-tablet-img.jpg    1x,
+                    ./images/team/mikhail-tablet-img@2x.jpg 2x
                   "
                   media="(min-width: 768px)"
                 />
                 <source
                   srcset="
-                    ./images/team/mikhail-mobile-img.jpg       1x,
-                    ./../images/team/mikhail-mobile-img@2x.jpg 2x
+                    ./images/team/mikhail-mobile-img.jpg    1x,
+                    ./images/team/mikhail-mobile-img@2x.jpg 2x
                   "
                   media="(max-width: 767px)"
                 />
                 <img
                   srcset="
-                    ./images/team/mikhail-desktop-img.jpg       1x,
-                    ./../images/team/mikhail-desktop-img@2x.jpg 2x
+                    ./images/team/mikhail-desktop-img.jpg    1x,
+                    ./images/team/mikhail-desktop-img@2x.jpg 2x
                   "
                   src="./images/team/mikhail-desktop-img.jpg"
                   alt="mykola"

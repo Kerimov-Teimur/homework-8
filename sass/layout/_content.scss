@@ -4,7 +4,7 @@
     gap: 8px;
     
     @media screen and (max-width: 767px) {
-            width: 326px;
+            width: 100%px;
             flex-wrap: wrap;
             justify-content: flex-start;
             gap: 8px;
@@ -12,12 +12,20 @@
         }
 
     @include tablet {
-        padding-bottom: 14px;
+        padding-bottom: 30px;
     }
 
     @include desktop {
         padding-bottom: 34px;
     }
+}
+
+
+.content-item:nth-child(1){
+    @media screen and (max-width: 767px) {
+        margin-bottom: 15px;
+    }
+    
 }
 
 .content-btn {
