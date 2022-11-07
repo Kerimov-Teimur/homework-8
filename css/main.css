@@ -1260,11 +1260,6 @@ address {
 .footer__address {
   padding-bottom: 60px;
 }
-@media screen and (min-width: 768px) {
-  .footer__address {
-    padding-bottom: 60px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .footer__address {
     padding-bottom: 0;
