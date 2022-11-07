@@ -393,6 +393,13 @@ address {
     line-height: 1.71;
   }
 }
+@media screen and (min-width: 1200px) {
+  .check-text {
+    display: flex;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
 
 .check-text .check-meta {
   display: flex;
@@ -652,7 +659,7 @@ address {
 }
 
 .mobile-menu__menu {
-  margin-bottom: 302px;
+  margin-bottom: 50px;
 }
 @media screen and (max-width: 767px) {
   .mobile-menu__menu {
@@ -1105,23 +1112,17 @@ address {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 8px;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 }
 @media screen and (min-width: 768px) {
   .content-list {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .content-list {
-    padding-bottom: 34px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .content-item:nth-child(1) {
-    margin-bottom: 15px;
+    margin-bottom: 50px;
   }
 }
 
